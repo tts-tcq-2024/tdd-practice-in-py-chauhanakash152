@@ -33,10 +33,10 @@ class TestStringCalculator(unittest.TestCase):
         self.assertEqual(add("//;\n1;2;3"), 6)
 
     def test_multiple_negatives_throws_exception(self):
-        """Multiple negative numbers should throw an exception with all negatives""" #noqa
+        """Multiple negative numbers should throw an exception with all negatives""" # noqa
         with self.assertRaises(ValueError) as context:
             add("-1,-2,3")
-        self.assertEqual(str(context.exception), "negatives not allowed: -1, -2") #noqa
+        self.assertEqual(str(context.exception), "negatives not allowed: -1, -2") # noqa
 
     def test_numbers_greater_than_1000_ignored_in_sum(self):
         """Numbers greater than 1000 should be ignored in the sum"""
