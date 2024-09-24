@@ -1,0 +1,13 @@
+Test Case ID,Test Case Name,Description,Input,Expected Output,Notes
+TC_001,EmptyString_ExpectZero,Empty string returns 0,"""""",0,Base case for empty string
+TC_002,SingleNumber_ExpectSameNumber,Single number input returns the number itself,"""1""",1,Base case for a single number
+TC_003,TwoNumbers_CommaSeparated_ExpectSum,Two numbers separated by a comma,"""1,2""",3,Sum of two numbers
+TC_004,MultipleNumbers_CommaSeparated_ExpectSum,Multiple numbers separated by commas,"""1,2,3,4""",10,Allow handling an unknown number of inputs
+TC_005,NewLineAsDelimiter_ExpectSum,Handle new lines between numbers,"""1\n2,3""",6,Supports newline as delimiter
+TC_006,InvalidFormat_CommaNewLine_ThrowsError,Incorrect format with newline after comma,"""1,\n""",Error,Input format not allowed
+TC_007,CustomDelimiter_MultipleNumbers_ExpectSum,Custom delimiter with multiple numbers,"""//;\n1;2;3""",6,Custom delimiter with more than two numbers
+TC_008,MultipleNegatives_ThrowsException,Multiple negative numbers throw an exception,"""-1,-2,3""","Exception: ""negatives not allowed: -1, -2""",Shows all negative numbers in the exception
+TC_009,NumbersGreaterThan1000_IgnoredInSum,Numbers greater than 1000 are ignored,"""2,1001""",2,Numbers larger than 1000 should be ignored
+TC_010,NumbersEqualTo1000_IncludedInSum,Numbers equal to 1000 are included,"""2,1000""",1002,1000 is included in the sum
+TC_011,CustomDelimiter_VariableLength_ExpectSum,Custom delimiter of any length,"//[###]\n4###5###6",15,Supports delimiters of any length
+
